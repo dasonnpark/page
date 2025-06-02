@@ -44,11 +44,22 @@ header.navbar {
 }
 .hero {
   background: linear-gradient(135deg, #f0f4ff, #dde7ff);
+  text-align: left; /* 왼쪽 정렬 */
+  padding: 100px 40px; /* 좌우 여백 추가 */
 }
+
 .hero h1 {
-  font-size: 2rem;
+  font-size: 2.5rem; /* 크기 키움 */
+  font-weight: 700;
   margin-bottom: 10px;
+  color: #222;
 }
+
+.hero p {
+  font-size: 1.1rem;  /* 기존보다 크게 */
+  color: #444;
+}
+
 .gallery {
   display: flex;
   gap: 20px;
