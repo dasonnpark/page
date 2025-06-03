@@ -35,6 +35,7 @@ header.navbar {
 }
 .nav-links li a {
   font-weight: 500;
+  font-size: 1.1rem; /* 또는 px 단위로 17px 정도 */
 }
 .section {
   padding: 80px 20px;
