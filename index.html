@@ -94,6 +94,19 @@
         <label>세부 요청 사항</label>
         <textarea name="세부 요청 사항" rows="4"></textarea>
       </div>
+
+      <div class="form-group full" style="margin-top: 20px;">
+  <p style="font-size: 13px; color: #666; line-height: 1.6;">
+    아래의 내용을 확인하신 후, 개인정보 제공에 동의해주세요.<br>
+    - 수집 항목: 이름, 연락처, 이메일, 요청 내용<br>
+    - 수집 목적: 프로젝트 상담 및 견적 안내<br>
+    - 보관 기간: 상담 종료 후 최대 1년<br>
+  </p>
+  <label style="font-size: 14px;">
+    <input type="checkbox" id="privacy-check"> 개인정보제공동의(필수)
+  </label>
+</div>
+      
       <button type="submit" class="submit-btn">지금 바로 문의하기</button>
     </form>
   </section>
@@ -110,15 +123,24 @@
 
     document.getElementById("contact-form").addEventListener("submit", function(e) {
       e.preventDefault();
-      emailjs.sendForm('whyworry', 'template_xgrw2gc', this)
-        .then(function() {
-          alert("문의가 정상적으로 전송되었습니다!");
-          document.getElementById("contact-form").reset();
-        }, function(error) {
-          alert("전송에 실패했으니 잠시 후 다시 시도해 주세요.");
-          console.log(error);
-        });
-    });
+
+ // ✅ 체크박스 확인
+    const check = document.getElementById("privacy-check");
+    if (!check.checked) {
+      alert("개인정보 제공에 동의해주셔야 문의를 보낼 수 있어요.");
+      return; // 전송 중단
+    }
+
+    // ✅ 체크 통과 후 이메일 전송
+    emailjs.sendForm('whyworry', 'template_xgrw2gc', this)
+      .then(function() {
+        alert("문의가 정상적으로 전송되었습니다!");
+        document.getElementById("contact-form").reset();
+      }, function(error) {
+        alert("전송에 실패했으니 잠시 후 다시 시도해 주세요.");
+        console.log(error);
+      });
+  });
   </script>
 
 </body>
