@@ -37,6 +37,13 @@ header.navbar {
   font-weight: 500;
   font-size: 1.1rem; /* 또는 px 단위로 17px 정도 */
 }
+
+@media (max-width: 768px) {
+  .nav-links li a {
+    font-size: 1rem; /* 모바일에선 너무 크지 않게 */
+  }
+}
+
 .section {
   padding: 80px 20px;
   max-width: 960px;
