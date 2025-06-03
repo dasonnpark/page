@@ -51,42 +51,62 @@
     <p><a href="https://open.kakao.com/s0bOuivh" target="_blank">카카오톡으로 문의하기</a></p>
   </section>
 
-  <form action="https://formsubmit.co/dasom234@naver.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-
-  <label>성함</label>
-  <input type="text" name="성함" required>
-
-  <label>연락처</label>
-  <input type="text" name="연락처" required>
-
-  <label>이메일</label>
-  <input type="email" name="이메일" required>
-
-  <label>작업 종류<br>(로고/브랜딩/패키지/기타)</label>
-  <input type="text" name="작업 종류" required>
-
-  <label>사용 채널<br>(온라인/오프라인)</label>
-  <input type="text" name="사용 채널" required>
-
-  <label>원하는 톤/스타일</label>
-  <textarea name="원하는 톤/스타일" required></textarea>
-
-  <label>참고하고 싶은 브랜드/이미지 링크</label>
-  <textarea name="참고하고 싶은 브랜드/이미지 링크" required></textarea>
-
-  <label>희망 마감일</label>
-  <input type="text" name="희망 마감일" required>
-
-  <label>희망 예산<br>*없으실 경우 '미정'입력</label>
-  <input type="text" name="희망 예산" required>
+ <section class="contact-section">
+  <form class="contact-form" action="https://formsubmit.co/dasom234@naver.com" method="POST">
     
-  <label>세부 요청 사항</label>
-  <textarea name="세부 요청 사항" required></textarea>
+    <div class="form-group">
+      <label>성함</label>
+      <input type="text" name="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label>연락처</label>
+      <input type="tel" name="phone" required>
+    </div>
 
-  <button type="submit">지금 바로 문의하기</button>
-</form>
+    <div class="form-group">
+      <label>이메일</label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>작업 종류</label>
+      <input type="text" name="work_type" placeholder="로고/브랜딩/패키지/기타">
+    </div>
+
+    <div class="form-group">
+      <label>사용 채널</label>
+      <input type="text" name="channel" placeholder="온라인/오프라인 등">
+    </div>
+
+    <div class="form-group">
+      <label>원하는 톤/스타일</label>
+      <textarea name="style" rows="2"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>참고 브랜드/이미지 링크</label>
+      <textarea name="reference" rows="2"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>희망 마감일</label>
+      <input type="text" name="deadline">
+    </div>
+
+    <div class="form-group">
+      <label>희망 예산</label>
+      <input type="text" name="budget">
+    </div>
+
+    <div class="form-group full">
+      <label>세부 요청 사항</label>
+      <textarea name="details" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">지금 바로 문의하기</button>
+  </form>
+</section>
 
 
   <!-- 푸터 -->
