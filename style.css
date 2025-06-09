@@ -156,6 +156,21 @@ footer {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
+  font-family: 'Wanted Sans Variable', sans-serif;
+}
+
+/* ✅ 전체 폼 요소에도 폰트 통일 */
+input,
+textarea,
+button,
+select {
+  font-family: 'Wanted Sans Variable', sans-serif;
+}
+
+/* ✅ placeholder도 폰트 적용 */
+::placeholder {
+  font-family: 'Wanted Sans Variable', sans-serif;
+  color: #999;
 }
 
 .submit-btn {
