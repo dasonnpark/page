@@ -129,9 +129,35 @@ footer {
   justify-content: center;
 }
 
-.contact-form {
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  max-width: 1080px;
   width: 100%;
-  max-width: 800px;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-info ul {
+  margin-top: 10px;
+  padding-left: 1.2rem;
+  line-height: 1.6;
+}
+
+.contact-form {
+  flex: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -191,6 +217,10 @@ select {
 }
 
 @media (max-width: 768px) {
+   .contact-container {
+    flex-direction: column;
+    gap: 40px;
+  }
   .contact-form {
     grid-template-columns: 1fr;
   }
