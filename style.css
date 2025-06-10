@@ -122,6 +122,13 @@ footer {
   }
 }
 
+.contact-section {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 80px 20px;
+}
+
 .contact-wrapper {
   display: flex;
   justify-content: space-between;
