@@ -130,20 +130,20 @@ footer {
 }
 
 .contact-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 60px;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  flex-wrap: wrap; /* 모바일 대응 */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  gap: 60px;
 }
 
+/* 왼쪽 공백 영역 */
 .contact-info-left {
-  flex: 1;
-  min-width: 280px;
-  padding-top: 10px;
+  flex: 1;
+  /* 필요 시 min-width로 크기 고정 */
+  min-width: 280px;
 }
 
 .contact-info-left h2 {
@@ -157,10 +157,25 @@ footer {
   line-height: 1.6;
 }
 
+/* 오른쪽 입력폼 */
 .contact-form-right {
-  flex: 2;
-  min-width: 300px;
+  flex: 1.5;
+  min-width: 400px;
+}
 
+/* 폼을 1단으로 정렬 */
+.contact-form.single-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-form.single-column .form-group.full {
+  width: 100%;
+}
+
+.contact-form.single-column input,
+.contact-form.single-column textarea {
+  width: 100%;
 }
 
 .contact-form {
