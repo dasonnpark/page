@@ -169,19 +169,19 @@ footer {
 }
 
 .contact-form {
-display: flex;
-flex-direction: column;
-gap: 20px;
-text-align: left;
-align-items: stretch;   /* ✅ input이 전체 너비로 늘어남 */
+  flex: 2;
+  min-width: 480px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .form-group {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;           /* ✅ 라벨 포함 텍스트 왼쪽 정렬 */
+  align-items: flex-start; /* 👈 중요: 수직축 왼쪽 정렬 */
 }
 
 .form-group label {
@@ -206,22 +206,22 @@ align-items: stretch;   /* ✅ input이 전체 너비로 늘어남 */
 }
 
 .checkbox-group {
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 8px;
   margin-top: 12px;
+  align-self: flex-start;       /* 👈 자기 자신을 왼쪽으로 */
+  justify-content: flex-start;  /* 👈 수평 방향 왼쪽 정렬 */
 }
 
 .submit-btn {
   padding: 16px;
   font-size: 1.1rem;
   font-weight: 600;
-  background-color: #00766f;
+  background-color: #222;
   color: white;
   border: none;
-  border-radius: 0px;
+  border-radius: 6px;
   cursor: pointer;
   width: 100%;
   margin-top: 10px;
@@ -238,10 +238,10 @@ align-items: stretch;   /* ✅ input이 전체 너비로 늘어남 */
 
 .btn {
   display: inline-block;
-  background-color: #00766f;
+  background-color: #222;
   color: #fff;
   padding: 12px 24px;
-  border-radius: 0px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
   transition: background-color 0.3s ease;
