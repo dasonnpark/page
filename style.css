@@ -144,7 +144,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 60px;
+  gap: 100px;
   max-width: 1080px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -157,6 +157,7 @@ footer {
 .contact-info {
   flex: 1;
   min-width: 280px;
+  max-width: 360px;
 }
 
 .contact-info h2 {
@@ -172,9 +173,9 @@ footer {
 }
 
 .contact-form {
-  flex: 2;
+  flex: 1.5;
   min-width: 480px;
-  max-width: 100%;
+  max-width: 600%;
   display: flex;
   flex-direction: column;
   gap: 20px;
