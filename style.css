@@ -174,8 +174,10 @@ footer {
 }
 
 .form-group {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start; /* 👈 중요: 수직축 왼쪽 정렬 */
 }
 
 .form-group label {
@@ -200,11 +202,12 @@ footer {
 }
 
 .checkbox-group {
-  text-align: left;         /* 왼쪽 정렬 */
   display: flex;
   align-items: center;
-  gap: 8px;                 /* 체크박스와 텍스트 간 여백 */
+  gap: 8px;
   margin-top: 12px;
+  align-self: flex-start;       /* 👈 자기 자신을 왼쪽으로 */
+  justify-content: flex-start;  /* 👈 수평 방향 왼쪽 정렬 */
 }
 
 .submit-btn {
