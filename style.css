@@ -80,12 +80,13 @@ header.navbar {
 .hero {
   background: linear-gradient(135deg, #ffffff, #ffffff);
   text-align: left;
-  height: 100vh; /* 화면 전체 높이 */
-  padding: 0 40px; /* 좌우 여백만 유지 */
+  height: 100vh;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 수직 가운데 정렬 */
-  align-items: flex-start; /* 왼쪽 정렬 */
+  justify-content: center;
+  align-items: flex-start;
+  position: relative; /* 👈 스크롤 안내 위치 기준 */
 }
 
 .hero h1 {
@@ -272,5 +273,34 @@ footer {
 
   .contact-form {
     min-width: 100%;
+  }
+}
+
+ .scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
+  opacity: 0.7;
+  animation: bounce 1.5s infinite;
+  font-family: 'Wanted Sans Variable', sans-serif;
+}
+
+.scroll-indicator span {
+  font-size: 1.5rem;
+  display: block;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
   }
 }
