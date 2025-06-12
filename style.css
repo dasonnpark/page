@@ -227,7 +227,7 @@ footer {
 .checkbox-group {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 8px;
   margin-top: 12px;
   padding-left: 2px;  /* ✅ 체크박스를 약간만 오른쪽으로 (디테일 조절용) */
