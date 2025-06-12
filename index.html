@@ -12,8 +12,8 @@
   <!-- 상단 네비게이션 -->
   <header class="navbar">
     <div class="logo">
-  <span class="logo-green">whyworry</span><span class="logo-black">works</span>
-</div>
+      <span class="logo-green">whyworry</span><span class="logo-black">works</span>
+    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="#home">홈</a></li>
@@ -46,81 +46,88 @@
     </div>
   </section>
 
-<section class="contact-section">
-  <div class="contact-wrapper">
-  <!-- 왼쪽 안내 영역 -->
-    <div class="contact-info-left">
-      <h2>Contact</h2>
-      <p>프로젝트 문의는 오른쪽의 이메일로 문의하기 혹은 <br>아래 카카오톡 문의하기 버튼을 눌러 남겨주세요.</p>
-      <div class="contact-buttons">
-        <a href="https://open.kakao.com/o/s0bOuivh" target="_blank" class="btn">카카오톡으로 문의하기</a>
+  <!-- 문의 섹션 -->
+  <section id="contact" class="contact-section">
+    <div class="contact-wrapper">
+
+      <!-- 왼쪽 안내 영역 -->
+      <div class="contact-info-left">
+        <h2>Contact</h2>
+        <p>프로젝트 문의는 오른쪽의 이메일로 문의하기 혹은<br>아래 카카오톡 문의하기 버튼을 눌러 남겨주세요.</p>
+      </div>
+
+      <!-- 오른쪽 입력 폼 -->
+      <div class="contact-form-right">
+        <form class="contact-form" id="contact-form">
+          <fieldset>
+            <legend class="sr-only">프로젝트 문의 폼</legend>
+
+            <div class="form-group">
+              <label for="name">성함</label>
+              <input type="text" id="name" name="성함" placeholder="차은우">
+            </div>
+            <div class="form-group">
+              <label for="phone">연락처</label>
+              <input type="tel" id="phone" name="연락처" placeholder="010-1234-5678">
+            </div>
+            <div class="form-group">
+              <label for="email">이메일</label>
+              <input type="email" id="email" name="이메일" placeholder="hello@whyworry.com">
+            </div>
+            <div class="form-group">
+              <label for="type">작업 종류</label>
+              <input type="text" id="type" name="작업 종류" placeholder="로고/브랜딩/패키지/기타">
+            </div>
+            <div class="form-group">
+              <label for="channel">사용 채널</label>
+              <input type="text" id="channel" name="사용 채널" placeholder="온라인/오프라인 등">
+            </div>
+            <div class="form-group">
+              <label for="tone">원하는 톤/스타일</label>
+              <input type="text" id="tone" name="원하는 톤/스타일" placeholder="Ex) 밝고 귀여운 느낌">
+            </div>
+            <div class="form-group">
+              <label for="reference">참고 브랜드/링크</label>
+              <input type="text" id="reference" name="참고 브랜드/링크" placeholder="Ex) https://kr.pinterest.com/">
+            </div>
+            <div class="form-group">
+              <label for="deadline">희망 마감일</label>
+              <input type="date" id="deadline" name="희망 마감일">
+            </div>
+            <div class="form-group full">
+              <label for="budget">희망 예산</label>
+              <input type="text" id="budget" name="희망 예산" placeholder="(아직 정해지지 않았다면 생략하셔도 됩니다.)">
+            </div>
+            <div class="form-group full">
+              <label for="details">세부 요청 사항</label>
+              <textarea id="details" name="세부 요청 사항" rows="4"
+                placeholder="Ex) 저희 브랜드/매장의 로고, 메뉴판, 포스터 등을 전체적으로 새롭게 디자인하고 싶어요. 햄버거와 감자튀김을 판매하는 매장이며, 귀여운 느낌을 강조하고 싶어요."></textarea>
+            </div>
+
+            <div class="form-group full" style="margin-top: 10px;">
+              <p style="font-size: 13px; color: #666; line-height: 1.6;">
+                아래의 내용을 확인하신 후, 개인정보 제공에 동의해주세요.<br>
+                - 수집 항목: 이름, 연락처, 이메일, 요청 내용<br>
+                - 수집 목적: 프로젝트 상담 및 견적 안내<br>
+                - 보관 기간: 상담 종료 후 최대 1년<br>
+              </p>
+              <div style="margin-top: 12px;">
+                <input type="checkbox" id="privacy-check" />
+                <label for="privacy-check">개인정보제공동의(필수)</label>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">지금 바로 문의하기</button>
+          </fieldset>
+        </form>
       </div>
     </div>
-  
-  <!-- 오른쪽 입력 폼 -->
-    <div class="contact-form-right">
-      <form class="contact-form" id="contact-form">
-      <div class="form-group">
-        <label>성함</label>
-        <input type="text" name="성함" placeholder="차은우">
-      </div>
-      <div class="form-group">
-        <label>연락처</label>
-        <input type="tel" name="연락처" placeholder="010-1234-5678">
-      </div>
-      <div class="form-group">
-        <label>이메일</label>
-        <input type="email" name="이메일" placeholder="hello@whyworry.com">
-      </div>
-      <div class="form-group">
-        <label>작업 종류</label>
-        <input type="text" name="작업 종류" placeholder="로고/브랜딩/패키지/기타">
-      </div>
-      <div class="form-group">
-        <label>사용 채널</label>
-        <input type="text" name="사용 채널" placeholder="온라인/오프라인 등">
-      </div>
-      <div class="form-group">
-        <label>원하는 톤/스타일</label>
-        <input type="text" name="원하는 톤/스타일" placeholder="Ex) 밝고 귀여운 느낌">
-      </div>
-      <div class="form-group">
-        <label>참고 브랜드/링크</label>
-        <input type="text" name="참고 브랜드/링크" placeholder="Ex) https://kr.pinterest.com/">
-      </div>
-      <div class="form-group">
-        <label>희망 마감일</label>
-        <input type="date" name="희망 마감일">
-      </div>
-      <div class="form-group">
-        <label>희망 예산</label>
-        <input type="text" name="희망 예산" placeholder="(아직 정해지지 않았다면 생략하셔도 됩니다.)">
-      </div>
-      <div class="form-group full">
-        <label>세부 요청 사항</label>
-        <textarea name="세부 요청 사항" placeholder="Ex) 저희 브랜드/매장의 로고, 메뉴판, 포스터 등을 전체적으로 새롭게 디자인하고 싶어요. 햄버거와 감자튀김을 판매하는 매장이며, 귀여운 느낌을 강조하고 싶어요." rows="4"></textarea>
-      </div>
 
-      <div class="form-group full" style="margin-top: 10px;">
-
-<p style="font-size: 13px; color: #666; line-height: 1.6;">
-  아래의 내용을 확인하신 후, 개인정보 제공에 동의해주세요.<br>
-  - 수집 항목: 이름, 연락처, 이메일, 요청 내용<br>
-  - 수집 목적: 프로젝트 상담 및 견적 안내<br>
-  - 보관 기간: 상담 종료 후 최대 1년<br>
-</p>
-
-<div style="margin-top: 12px;">
-  <label style="font-size: 14px;">
-    <input type="checkbox" id="privacy-check"> 개인정보제공동의(필수)
-  </label>
-</div>
-      <br> <!-- 한 줄 띄우기 -->  
-      <button type="submit" class="submit-btn">지금 바로 문의하기</button>
-      </form>
+    <!-- 카카오톡 버튼은 폼 하단으로 분리 -->
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="https://open.kakao.com/o/s0bOuivh" target="_blank" class="btn">카카오톡으로 문의하기</a>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- 푸터 -->
   <footer>
@@ -130,28 +137,26 @@
   <!-- ✅ EmailJS 연동 -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
-    emailjs.init("ydv1mravpx973wSGG"); // 너의 public key로 교체
+    emailjs.init("ydv1mravpx973wSGG");
 
-    document.getElementById("contact-form").addEventListener("submit", function(e) {
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
       e.preventDefault();
 
- // ✅ 체크박스 확인
-    const check = document.getElementById("privacy-check");
-    if (!check.checked) {
-      alert("개인정보 제공에 동의해주셔야 문의를 보낼 수 있어요.");
-      return; // 전송 중단
-    }
+      const check = document.getElementById("privacy-check");
+      if (!check.checked) {
+        alert("개인정보 제공에 동의해주셔야 문의를 보낼 수 있어요.");
+        return;
+      }
 
-    // ✅ 체크 통과 후 이메일 전송
-    emailjs.sendForm('whyworry', 'template_xgrw2gc', this)
-      .then(function() {
-        alert("문의가 정상적으로 전송되었습니다!");
-        document.getElementById("contact-form").reset();
-      }, function(error) {
-        alert("전송에 실패했으니 잠시 후 다시 시도해 주세요.");
-        console.log(error);
-      });
-  });
+      emailjs.sendForm('whyworry', 'template_xgrw2gc', this)
+        .then(function () {
+          alert("문의가 정상적으로 전송되었습니다!");
+          document.getElementById("contact-form").reset();
+        }, function (error) {
+          alert("전송에 실패했으니 잠시 후 다시 시도해 주세요.");
+          console.log(error);
+        });
+    });
   </script>
 
 </body>
