@@ -239,7 +239,6 @@ footer {
 }
 
 .kakao-btn-wrapper {
-  font-size: 1.1rem;
   text-align: center;
   margin-top: 40px;
 }
@@ -251,6 +250,7 @@ footer {
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
+  font-size: 1.1rem;
   font-weight: 500;
   transition: background-color 0.3s ease;
 }
