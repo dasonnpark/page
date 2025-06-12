@@ -225,12 +225,12 @@ footer {
 }
 
 .checkbox-group {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 8px;
   margin-top: 12px;
-  align-self: flex-start;       /* 👈 자기 자신을 왼쪽으로 */
-  justify-content: flex-start;  /* 👈 수평 방향 왼쪽 정렬 */
+  padding-left: 2px;  /* ✅ 체크박스를 약간만 오른쪽으로 (디테일 조절용) */
 }
 
 .submit-btn {
