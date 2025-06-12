@@ -151,6 +151,10 @@ footer {
   margin: 0 auto;
 }
 
+.contact-section .container {
+  padding: 0 40px;
+}
+
 .contact-wrapper {
   display: flex;
   justify-content: space-between;
