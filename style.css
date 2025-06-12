@@ -71,7 +71,7 @@ header.navbar {
 }
 
 .section p {
-  font-size: 4.1rem;  /* 기존보다 크게 */
+  font-size: 2rem;  /* 기존보다 크게 */
   color: #444;
   text-align: left; /* 왼쪽 정렬 */
 }
