@@ -165,19 +165,19 @@ footer {
 }
 
 .contact-form {
-  flex: 2;
-  min-width: 480px;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: left;           /* ✅ 수평 좌측 정렬 */
+  align-items: flex-start;    /* ✅ 내부 요소 왼쪽 정렬 */
 }
 
 .form-group {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 👈 중요: 수직축 왼쪽 정렬 */
+  align-items: flex-start;
+  text-align: left;           /* ✅ 라벨 포함 텍스트 왼쪽 정렬 */
 }
 
 .form-group label {
@@ -202,12 +202,12 @@ footer {
 }
 
 .checkbox-group {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 8px;
   margin-top: 12px;
-  align-self: flex-start;       /* 👈 자기 자신을 왼쪽으로 */
-  justify-content: flex-start;  /* 👈 수평 방향 왼쪽 정렬 */
 }
 
 .submit-btn {
