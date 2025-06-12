@@ -143,6 +143,10 @@ footer {
   flex-wrap: wrap;
 }
 
+.contact-buttons {
+  margin-top: 20px; /* 원하는 만큼 간격 조정 */
+}
+
 .contact-info {
   flex: 1;
   min-width: 280px;
