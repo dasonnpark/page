@@ -171,8 +171,8 @@ footer {
 }
 
 .contact-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column; /* 수직 정렬 */
   gap: 20px;
 }
 
@@ -180,30 +180,45 @@ footer {
   display: flex;
   flex-direction: column;
 }
-
+  
 .contact-form .form-group.full {
   grid-column: span 2;
 }
-
+  
+.contact-form label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+  
 .contact-form input,
-.contact-form textarea {
-  padding: 10px;
+.contact-form textarea,
+.contact-form select {
+  padding: 14px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
   font-family: 'Wanted Sans Variable', sans-serif;
+  width: 100%;
+  max-width: 100%;
+}
+
+  .contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 .submit-btn {
-  grid-column: span 2;
-  padding: 15px;
+  margin-top: 30px;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
   background-color: #222;
-  color: #fff;
-  font-size: 1rem;
+  color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .submit-btn:hover {
