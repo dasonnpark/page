@@ -66,18 +66,14 @@ header.navbar {
 }
 
 .section {
-  padding: 80px 40px 40px; /* 좌우 padding 통일 */
-  max-width: 1080px;       /* hero 섹션과 통일되도록 늘리기 */
-  margin: 0 auto;
+  padding: 80px 0 40px;
   text-align: left;
 }
 
 .hero {
   background: linear-gradient(135deg, #ffffff, #ffffff);
   text-align: left; /* 왼쪽 정렬 */
-  padding: 100px 40px;
-  max-width: 1080px;
-  margin: 0 auto;
+padding: 100px 0;
 }
 
 .hero h1 {
@@ -101,8 +97,7 @@ header.navbar {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 100px 40px;
-  max-width: 1080px;
+  padding: 60px 0;
 }
 .gallery .item {
   max-width: 300px;
@@ -138,8 +133,7 @@ footer {
 
 .contact-section {
   background: #fff;
-  padding: 100px 40px;
-  max-width: 1080px;
+  padding: 100px 0;
   margin: 0 auto;
 }
 
