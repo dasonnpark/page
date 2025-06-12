@@ -123,92 +123,80 @@ footer {
 }
 
 .contact-section {
+  background: #fff;
   padding: 80px 20px;
-  background-color: #fff;
 }
 
 .contact-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 60px;
   max-width: 1080px;
   margin: 0 auto;
-  align-items: flex-start;
   flex-wrap: wrap;
 }
 
-/* 왼쪽 안내 */
-.contact-info-left {
+.contact-info {
   flex: 1;
   min-width: 280px;
 }
 
-.contact-info-left h2 {
-  font-size: 1.8rem;
-  margin-bottom: 12px;
+.contact-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
-.contact-info-left p {
+.contact-info p {
   font-size: 1rem;
   color: #444;
   line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.contact-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-.contact-buttons .btn {
-  width: fit-content;
-}
-
-.contact-form-right {
-  flex: 2;
-  min-width: 500px; /* 넓게 */
-  max-width: 100%;
 }
 
 .contact-form {
+  flex: 2;
+  min-width: 480px;
+  max-width: 100%;
   display: flex;
-  flex-direction: column; /* 수직 정렬 */
+  flex-direction: column;
   gap: 20px;
 }
 
-.contact-form .form-group {
+.form-group {
   display: flex;
   flex-direction: column;
 }
-  
-.contact-form .form-group.full {
-  grid-column: span 2;
-}
-  
-.contact-form label {
-  display: block; /* 👈 필수: 레이블 아래 input을 정렬 */
+
+.form-group label {
   font-weight: 500;
   margin-bottom: 6px;
+  font-size: 0.95rem;
 }
-  
+
 .contact-form input,
 .contact-form textarea {
-  width: 100%; /* 👈 input 너비를 전체로 */
-  padding: 10px;
+  padding: 12px 14px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
   font-family: 'Wanted Sans Variable', sans-serif;
-  box-sizing: border-box; /* padding 포함 너비 계산 */
+  width: 100%;
 }
 
-  .contact-form textarea {
+.contact-form textarea {
   resize: vertical;
   min-height: 120px;
 }
 
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
 .submit-btn {
-  margin-top: 30px;
   padding: 16px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -218,46 +206,16 @@ footer {
   border-radius: 6px;
   cursor: pointer;
   width: 100%;
+  margin-top: 10px;
 }
 
 .submit-btn:hover {
   background-color: #444;
 }
 
-/* ✅ 전체 폼 요소에도 폰트 통일 */
-input,
-textarea,
-button,
-select {
-  font-family: 'Wanted Sans Variable', sans-serif;
-}
-
-/* ✅ placeholder도 폰트 적용 */
-::placeholder {
-  font-family: 'Wanted Sans Variable', sans-serif;
-  color: #999;
-}
-
-/* 반응형 */
-@media (max-width: 768px) {
-  .contact-wrapper {
-    flex-direction: column;
-  }
-  .contact-form {
-    grid-template-columns: 1fr;
-  }
-  .contact-form .form-group.full,
-  .submit-btn {
-    grid-column: span 1;
-  }
-  .contact-buttons {
-    flex-direction: row;
-    gap: 10px;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
+.kakao-btn-wrapper {
+  text-align: center;
+  margin-top: 40px;
 }
 
 .btn {
@@ -273,4 +231,15 @@ html {
 
 .btn:hover {
   background-color: #444;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    min-width: 100%;
+  }
 }
