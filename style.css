@@ -79,21 +79,26 @@ header.navbar {
 
 .hero {
   background: linear-gradient(135deg, #ffffff, #ffffff);
-  text-align: left; /* 왼쪽 정렬 */
-padding: 100px 0;
+  text-align: left;
+  height: 100vh; /* 화면 전체 높이 */
+  padding: 0 40px; /* 좌우 여백만 유지 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 수직 가운데 정렬 */
+  align-items: flex-start; /* 왼쪽 정렬 */
 }
 
 .hero h1 {
-  font-size: 5.5rem; /* 크기 키움 */
+  font-size: 5.5rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   color: #222;
 }
 
 .hero p {
-  font-size: 4.1rem;  /* 기존보다 크게 */
+  font-size: 2.5rem;
   color: #444;
-  text-align: left; /* 왼쪽 정렬 */
+  line-height: 1.6;
 }
 
 .gallery {
