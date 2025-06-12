@@ -87,9 +87,6 @@ padding: 100px 0;
   font-size: 4.1rem;  /* 기존보다 크게 */
   color: #444;
   text-align: left; /* 왼쪽 정렬 */
-  padding: 100px 40px;
-  max-width: 1080px;
-  margin: 0 auto;
 }
 
 .gallery {
