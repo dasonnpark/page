@@ -164,10 +164,10 @@ footer {
   width: fit-content;
 }
 
-/* 오른쪽 입력 폼 */
 .contact-form-right {
   flex: 2;
-  min-width: 480px;
+  min-width: 500px; /* 넓게 */
+  max-width: 100%;
 }
 
 .contact-form {
@@ -186,21 +186,20 @@ footer {
 }
   
 .contact-form label {
-  font-size: 1rem;
+  display: block; /* 👈 필수: 레이블 아래 input을 정렬 */
   font-weight: 500;
   margin-bottom: 6px;
 }
   
 .contact-form input,
-.contact-form textarea,
-.contact-form select {
-  padding: 14px;
+.contact-form textarea {
+  width: 100%; /* 👈 input 너비를 전체로 */
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
   font-family: 'Wanted Sans Variable', sans-serif;
-  width: 100%;
-  max-width: 100%;
+  box-sizing: border-box; /* padding 포함 너비 계산 */
 }
 
   .contact-form textarea {
