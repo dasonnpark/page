@@ -83,13 +83,15 @@ header.navbar {
   background: linear-gradient(135deg, #ffffff, #ffffff);
   text-align: left;
   height: 100vh;
-  padding: 0;
+  padding: 0 40px; /* 좌우 여백만 유지 */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* 👈 가운데에서 위쪽 정렬로 변경 */
   align-items: flex-start;
   position: relative;
+  padding-top: 80px; /* 👈 상단 여백을 원하는 만큼만 지정 */
 }
+
 .hero h1 {
   font-size: 5.5rem;
   font-weight: 700;
