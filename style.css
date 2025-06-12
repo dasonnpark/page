@@ -149,6 +149,8 @@ footer {
   gap: 100px;
   max-width: 1080px;
   margin: 0 auto;
+  padding-left: 40px;  /* ✅ 기준선 맞추기 */
+  padding-right: 40px;
   flex-wrap: wrap;
 }
 
@@ -177,7 +179,6 @@ footer {
 .contact-form {
   flex: 1.5;
   min-width: 480px;
-  max-width: 600%;
   display: flex;
   flex-direction: column;
   gap: 20px;
