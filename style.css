@@ -188,11 +188,11 @@ footer {
 }
 
 .plan-card .section-block:nth-of-type(2) {
-  min-height: 100px; /* 기타 사항 */
+  min-height: 227px; /* 기타 사항 */
 }
 
 .plan-card .section-block:nth-of-type(3) {
-  min-height: 120px; /* 권장 상황 */
+  min-height: 136px; /* 권장 상황 */
 }
 
 .plan-tag {
