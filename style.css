@@ -161,6 +161,7 @@ footer {
   justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .plan-card {
