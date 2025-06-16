@@ -48,52 +48,53 @@
   </div>
 </section>
 
-  <!-- 작업물 섹션 -->
-  <section id="portfolio" class="section">
+<!-- 작업물 섹션 -->
+<section id="portfolio" class="section">
   <div class="container">
     <h2>Portfolio</h2>
-    <div class="gallery">
-      <div class="item" onclick="openModal('modal1')">
-      <img src="img/소수의방_교재.jpg" alt="소수의방" class="portfolio-img">
-        <p>패키지 디자인</p>
-      </div>
-      <div class="item" onclick="openModal('modal2')">
-        <img src="project2.jpg" alt="project2">
-        <p>로고 리디자인</p>
-      </div>
-      <div class="item" onclick="openModal('modal3')">
-        <img src="project3.jpg" alt="project3">
-        <p>브랜딩 키트</p>
+    <div class="gallery-scroll">
+      <div class="gallery-track">
+        <div class="gallery-item" onclick="openModal('modal1')">
+          <img src="img/소수의방_교재.jpg" alt="소수의방" />
+          <div class="overlay">패키지 디자인</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('modal2')">
+          <img src="project2.jpg" alt="project2" />
+          <div class="overlay">로고 리디자인</div>
+        </div>
+        <div class="gallery-item" onclick="openModal('modal3')">
+          <img src="project3.jpg" alt="project3" />
+          <div class="overlay">브랜딩 키트</div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- 모달 영역들 -->
+  <!-- 모달들 -->
   <div id="modal1" class="modal" onclick="closeModal(this)">
     <div class="modal-content">
       <span class="close" onclick="closeModal(this)">&times;</span>
-      <img src="project1-detail.jpg" alt="상세 이미지">
-      <p>패키지 디자인 상세 설명입니다.</p>
+      <img src="project1-detail.jpg" alt="상세 이미지" />
+      <p class="caption">패키지 디자인 상세 설명입니다.</p>
     </div>
   </div>
 
   <div id="modal2" class="modal" onclick="closeModal(this)">
     <div class="modal-content">
       <span class="close" onclick="closeModal(this)">&times;</span>
-      <img src="project2-detail.jpg" alt="상세 이미지">
-      <p>로고 리디자인 상세 설명입니다.</p>
+      <img src="project2-detail.jpg" alt="상세 이미지" />
+      <p class="caption">로고 리디자인 상세 설명입니다.</p>
     </div>
   </div>
 
   <div id="modal3" class="modal" onclick="closeModal(this)">
     <div class="modal-content">
       <span class="close" onclick="closeModal(this)">&times;</span>
-      <img src="project3-detail.jpg" alt="상세 이미지">
-      <p>브랜딩 키트 상세 설명입니다.</p>
+      <img src="project3-detail.jpg" alt="상세 이미지" />
+      <p class="caption">브랜딩 키트 상세 설명입니다.</p>
     </div>
   </div>
 </section>
-
   
 <section class="plan-section">
   <h2>Service Plan</h2>
