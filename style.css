@@ -122,22 +122,23 @@ header.navbar {
 
 .gallery-scroll {
   overflow-x: auto;
-  white-space: nowrap;
+  overflow-y: hidden;       /* 세로 스크롤 방지 */
+  white-space: nowrap;      /* 줄 바꿈 방지 */
   padding: 20px 0;
 }
 
 .gallery-track {
-  display: inline-flex;
+  display: flex;            /* ← 중요: flex여야 가로 정렬됨 */
   gap: 24px;
 }
 
 .gallery-item {
-  position: relative;
+  flex: 0 0 auto;           /* ← 줄바꿈 없이 가로로 쭉 나열 */
   width: 300px;
   height: 200px;
-  flex-shrink: 0;
-  border-radius: 8px;
+  position: relative;
   overflow: hidden;
+  border-radius: 8px;
   cursor: pointer;
 }
 
