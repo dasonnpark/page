@@ -307,16 +307,24 @@
     });
   </script>
 
-  <script>
-function openModal(id) {
-  document.getElementById(id).style.display = 'flex';
-}
-function closeModal(el) {
-  if (el.classList.contains('modal') || el.classList.contains('close')) {
-    el.closest('.modal').style.display = 'none';
-  }
-}
+<script>
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', function () {
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modal-img');
+      const caption = document.getElementById('modal-caption');
+
+      modal.style.display = 'block';
+      modalImg.src = this.getAttribute('data-image');
+      caption.textContent = this.getAttribute('data-title');
+    });
+  });
+
+  document.querySelector('.close').addEventListener('click', function () {
+    document.getElementById('modal').style.display = 'none';
+  });
 </script>
+
 
 </body>
 </html>
