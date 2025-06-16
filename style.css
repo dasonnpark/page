@@ -176,7 +176,6 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   height: 720px;
-  overflow: auto;
 }
 
 .plan-card:hover {
