@@ -176,6 +176,22 @@ header.navbar {
   opacity: 1;
 }
 
+.view-all-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #444;
+}
+
 /* 모달 스타일 */
 .modal {
   display: none;
