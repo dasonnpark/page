@@ -144,8 +144,8 @@
   <div class="plan-container">
     <!-- Plan 1 -->
     <div class="plan-card beginner">
-      <div class="plan-tag">BEGINNERS ONLY</div>
-      <h3>플랜A. 로고 디자인 단독</h3>
+      <div class="plan-tag">JUST NEED A LOGO</div>
+      <h3>플랜 A. 로고 디자인 단독</h3>
       <p class="price">₩300,000~</p>
       <a href="#" class="plan-btn">프로젝트 문의하기</a>
       <div class="section-block">
@@ -175,8 +175,8 @@
 
     <!-- Plan 2 -->
     <div class="plan-card popular">
-      <div class="plan-tag">RECENTLY POPULAR</div>
-      <h3>플랜B. 네이밍 + 로고 디자인</h3>
+      <div class="plan-tag">FOR NEW BRANDS</div>
+      <h3>플랜 B. 네이밍 + 로고 디자인</h3>
       <p class="price">₩500,000~</p>
       <a href="#" class="plan-btn">프로젝트 문의하기</a>
        <div class="section-block">
@@ -206,7 +206,7 @@
 
     <!-- Plan 3 -->
     <div class="plan-card long">
-      <div class="plan-tag">LONG HISTORY</div>
+      <div class="plan-tag">FOR ALL-IN-ONE BRANDING</div>
       <h3>플랜C. 브랜딩 런칭 패키지</h3>
       <p class="price">₩1,000,000~</p>
       <a href="#" class="plan-btn">프로젝트 문의하기</a>
@@ -349,31 +349,35 @@
           console.log(error);
         });
     });
-  <script>
-  let currentIndex = 0;
-  const itemsPerClick = 3;
-
+    
+<script>
+  let itemsToShow = 3;
   function loadMore() {
     const items = document.querySelectorAll('.gallery-item');
-    let revealed = 0;
+    let visibleCount = 0;
 
-    for (let i = currentIndex; i < items.length && revealed < itemsPerClick; i++) {
-      items[i].style.display = 'block';
-      revealed++;
+    // 현재 보이는 아이템 수 세기
+    items.forEach(item => {
+      if (item.style.display !== 'none') visibleCount++;
+    });
+
+    // 다음 3개 보여주기
+    for (let i = visibleCount; i < visibleCount + itemsToShow; i++) {
+      if (items[i]) items[i].style.display = 'block';
     }
 
-    currentIndex += revealed;
-
-    // 더이상 보일 게 없으면 버튼 숨기기
-    if (currentIndex >= items.length) {
+    // 모두 다 보여졌으면 버튼 숨기기
+    if (visibleCount + itemsToShow >= items.length) {
       document.querySelector('.view-all-btn').style.display = 'none';
     }
   }
 
-  // 처음에 3개 보여주기
-  window.addEventListener('DOMContentLoaded', loadMore);
+  // 페이지 로드 시 처음 3개만 보이게
+  window.onload = function () {
+    loadMore();
+  };
 </script>
-
+  
 <script>
   document.querySelectorAll('.gallery-item').forEach(item => {
     item.addEventListener('click', function () {
