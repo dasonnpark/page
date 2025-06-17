@@ -139,7 +139,7 @@ header.navbar {
   transition: transform 0.3s ease;
 }
 
-gallery-item .overlay {
+.gallery-item .overlay {
   position: absolute;
   bottom: 0;
   left: 0;
