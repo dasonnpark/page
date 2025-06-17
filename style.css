@@ -282,6 +282,14 @@ footer {
   }
 }
 
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 40px 0;
+  justify-items: center;
+}
+
 
 .plan-section {
   padding: 80px 40px;
