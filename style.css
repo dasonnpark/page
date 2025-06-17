@@ -120,13 +120,6 @@ header.navbar {
   padding: 40px 0;
 }
 
-.gallery-scroll {
-  overflow-x: auto;
-  overflow-y: hidden;       /* 세로 스크롤 방지 */
-  white-space: nowrap;      /* 줄 바꿈 방지 */
-  padding: 20px 0;
-}
-
 .gallery-track {
   display: flex;
   flex-wrap: wrap;  /* 자동 줄바꿈 */
