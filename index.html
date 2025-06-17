@@ -316,35 +316,29 @@
           console.log(error);
         });
     });
-  </script>
-
   <script>
-  const items = document.querySelectorAll('.gallery-item');
-  const loadMoreBtn = document.getElementById('loadMore');
-  let visibleCount = 3;
+  let currentIndex = 0;
+  const itemsPerClick = 3;
 
-  // 처음엔 3개만 보여주기
-  function updateVisibleItems() {
-    items.forEach((item, index) => {
-      if (index < visibleCount) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
+  function loadMore() {
+    const items = document.querySelectorAll('.gallery-item');
+    let revealed = 0;
 
-    // 더 이상 숨겨진 항목이 없으면 버튼 숨기기
-    if (visibleCount >= items.length) {
-      loadMoreBtn.style.display = 'none';
+    for (let i = currentIndex; i < items.length && revealed < itemsPerClick; i++) {
+      items[i].style.display = 'block';
+      revealed++;
+    }
+
+    currentIndex += revealed;
+
+    // 더이상 보일 게 없으면 버튼 숨기기
+    if (currentIndex >= items.length) {
+      document.querySelector('.view-all-btn').style.display = 'none';
     }
   }
 
-  updateVisibleItems();
-
-  loadMoreBtn.addEventListener('click', () => {
-    visibleCount += 3;
-    updateVisibleItems();
-  });
+  // 처음에 3개 보여주기
+  window.addEventListener('DOMContentLoaded', loadMore);
 </script>
 
 <script>
