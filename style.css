@@ -127,7 +127,7 @@ header.navbar {
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
-  display: none;       /* 초기에 숨기고 JS로 하나씩 보여줌 */
+  display: block
 }
 
 .gallery-item img {
