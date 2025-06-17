@@ -129,14 +129,9 @@ header.navbar {
 
 .gallery-track {
   display: flex;
+  flex-wrap: wrap;  /* 자동 줄바꿈 */
   gap: 20px;
-  animation: slide-scroll 20s linear infinite;
-  width: max-content;
-}
-
-@keyframes slide-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* 필요 시 값 조절 */
+  width: 100%;
 }
 
 .gallery-item {
@@ -147,6 +142,7 @@ header.navbar {
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
+  display: none;
 }
 
 .gallery-item img {
