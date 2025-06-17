@@ -127,7 +127,7 @@ header.navbar {
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
-  display: block
+  display: none;
 }
 
 .gallery-item img {
