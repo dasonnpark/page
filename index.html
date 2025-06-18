@@ -108,7 +108,8 @@
     <span class="close" onclick="closeModal(event)">&times;</span>
 
     <div class="slider">
-      <button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>
+<button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+<button class="next" onclick="changeSlide(1)">&#10095;</button>
       <div class="slides-container" data-index="0">
         <img src="img/소수의방_로고.jpg" class="slide active" />
         <img src="img/소수의방_교재.jpg" class="slide" />
@@ -507,14 +508,30 @@
   
 <script>
   function openModal(modalId) {
-    document.getElementById(modalId).style.display = 'block';
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+
+    modal.style.display = 'block';
+
+    // 슬라이드 초기화
+    const slides = modal.querySelectorAll('.slide');
+    slides.forEach(slide => slide.classList.remove('active'));
+    if (slides.length > 0) slides[0].classList.add('active');
+
+    const container = modal.querySelector('.slides-container');
+    if (container) container.dataset.index = 0;
+
+    // 열리는 모달의 순서를 인덱스로 저장
+    const modals = document.querySelectorAll('.modal');
+    const modalIndex = Array.from(modals).indexOf(modal);
+    modal.dataset.modalIndex = modalIndex;
   }
 
   function closeModal(event) {
     const modal = event.currentTarget.closest('.modal');
     modal.style.display = 'none';
 
-    // 모달 닫히면 슬라이드 초기화
+    // 슬라이드 초기화
     const slides = modal.querySelectorAll('.slide');
     slides.forEach(slide => slide.classList.remove('active'));
     if (slides.length > 0) slides[0].classList.add('active');
@@ -523,13 +540,15 @@
     if (container) container.dataset.index = 0;
   }
 
-  function changeSlide(step, modalIndex) {
-    const modals = document.querySelectorAll('.modal');
-    const modal = modals[modalIndex];
+  function changeSlide(step) {
+    // 현재 열린 모달 찾기
+    const modal = document.querySelector('.modal[style*="display: block"]');
+    if (!modal) return;
+
     const container = modal.querySelector('.slides-container');
     const slides = container.querySelectorAll('.slide');
 
-    let currentIndex = parseInt(container.dataset.index);
+    let currentIndex = parseInt(container.dataset.index || 0);
     slides[currentIndex].classList.remove('active');
 
     currentIndex += step;
@@ -540,7 +559,7 @@
     container.dataset.index = currentIndex;
   }
 
-  // 더보기 버튼 기능 유지
+  // 더보기 버튼 기능
   let itemsToShow = 3;
   let currentIndex = 0;
 
@@ -552,7 +571,8 @@
     currentIndex += itemsToShow;
 
     if (currentIndex >= items.length) {
-      document.querySelector('.view-all-btn').style.display = 'none';
+      const btn = document.querySelector('.view-all-btn');
+      if (btn) btn.style.display = 'none';
     }
   }
 
@@ -560,6 +580,7 @@
     loadMore();
   };
 </script>
+
 
 
   
