@@ -89,6 +89,7 @@ header.navbar {
   position: relative;
   display: flex;
   align-items: center;
+}
 
 .hero-overlay {
   position: absolute;
