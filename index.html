@@ -306,28 +306,6 @@
     });
     </script>
     
-<script>
-  let itemsToShow = 3;
-  let currentIndex = 0;
-
-  function loadMore() {
-    const items = document.querySelectorAll('.gallery-item');
-    for (let i = currentIndex; i < currentIndex + itemsToShow && i < items.length; i++) {
-      items[i].style.display = 'block';
-    }
-    currentIndex += itemsToShow;
-
-    // 모든 항목이 다 보이면 버튼 숨기기
-    if (currentIndex >= items.length) {
-      document.querySelector('.view-all-btn').style.display = 'none';
-    }
-  }
-
-  // 첫 로딩 시 자동 3개 표시
-  window.onload = function () {
-    loadMore();
-  };
-</script>
   
 <script>
   function openModal(modalId) {
@@ -363,24 +341,21 @@
     if (container) container.dataset.index = 0;
   }
 
-  function changeSlide(step) {
-    // 현재 열린 모달 찾기
-    const modal = document.querySelector('.modal[style*="display: block"]');
-    if (!modal) return;
+ function changeSlide(step, modalIndex) {
+  const modal = document.getElementById(`modal${modalIndex}`);
+  const container = modal.querySelector('.slides-container');
+  const slides = container.querySelectorAll('.slide');
 
-    const container = modal.querySelector('.slides-container');
-    const slides = container.querySelectorAll('.slide');
+  let currentIndex = parseInt(container.dataset.index || 0);
+  slides[currentIndex].classList.remove('active');
 
-    let currentIndex = parseInt(container.dataset.index || 0);
-    slides[currentIndex].classList.remove('active');
+  currentIndex += step;
+  if (currentIndex < 0) currentIndex = slides.length - 1;
+  if (currentIndex >= slides.length) currentIndex = 0;
 
-    currentIndex += step;
-    if (currentIndex < 0) currentIndex = slides.length - 1;
-    if (currentIndex >= slides.length) currentIndex = 0;
-
-    slides[currentIndex].classList.add('active');
-    container.dataset.index = currentIndex;
-  }
+  slides[currentIndex].classList.add('active');
+  container.dataset.index = currentIndex;
+}
 
   // 더보기 버튼 기능
   let itemsToShow = 3;
