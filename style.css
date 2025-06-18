@@ -280,6 +280,53 @@ footer {
   }
 }
 
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slides-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  color: black;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.prev {
+  left: -40px;
+}
+
+.next {
+  right: -40px;
+}
+
 .grid-layout {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
