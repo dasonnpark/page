@@ -114,14 +114,14 @@ header.navbar {
 
 .gallery {
   display: flex;
-  gap: 20px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: space-between;  /* ← 중심 정렬 대신, 좌우에 붙게! */
+  gap: 20px;
   padding: 40px 0;
 }
 
 .gallery-item {
-  width: 300px;
+  width: calc((100% - 40px) / 3); /* gap 20px * 2 → 3칸 구조 */
   height: 200px;
   position: relative;
   overflow: hidden;
@@ -286,18 +286,17 @@ footer {
 
 .plan-container {
   display: flex;
-  justify-content: center;
-  gap: 24px;
   flex-wrap: wrap;
-  align-items: stretch;
+  justify-content: space-between;  /* 좌우에 딱 붙게 */
+  gap: 24px;
   min-height: 200px;
 }
 
 .plan-card {
+  width: calc((100% - 48px) / 3); /* gap 24px * 2 → 3개 맞춤 */
   background: #fff;
   border-radius: 16px;
   padding: 32px 24px;
-  width: 300px;
   text-align: left;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
@@ -378,11 +377,26 @@ footer {
   margin-top: 16px;
 }
 
+@media (max-width: 768px) {
+  .gallery {
+    justify-content: center;
+  }
+
+  .gallery-item {
+    width: 100%;
+    max-width: 480px;
+  }
+}
 
 @media (max-width: 768px) {
-  .plans {
+  .plan-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .plan-card {
+    width: 100%;
+    max-width: 480px; /* 선택: 카드가 너무 넓어지지 않도록 제한 */
   }
 }
 
