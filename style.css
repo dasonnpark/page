@@ -205,6 +205,9 @@ header.navbar {
   margin: auto;
   max-width: 80%;
   max-height: 80%;
+  background-color: #fff;    /* 흰 배경 없으면 추가 */
+  padding: 40px 20px 20px;   /* 상단 40px, 좌우 20px, 하단 20px */
+  border-radius: 8px;        /* 모서리 둥글게 (선택) */
 }
 
 .caption {
