@@ -503,23 +503,63 @@
 </script>
   
 <script>
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', function () {
-      const modal = document.getElementById('modal');
-      const modalImg = document.getElementById('modal-img');
-      const caption = document.getElementById('modal-caption');
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+  }
 
-      modal.style.display = 'block';
-      modalImg.src = this.getAttribute('data-image');
-      caption.textContent = this.getAttribute('data-title');
-    });
-  });
+  function closeModal(event) {
+    const modal = event.currentTarget.closest('.modal');
+    modal.style.display = 'none';
 
-  document.querySelector('.close').addEventListener('click', function () {
-    document.getElementById('modal').style.display = 'none';
-  });
+    // 모달 닫히면 슬라이드 초기화
+    const slides = modal.querySelectorAll('.slide');
+    slides.forEach(slide => slide.classList.remove('active'));
+    if (slides.length > 0) slides[0].classList.add('active');
+
+    const container = modal.querySelector('.slides-container');
+    if (container) container.dataset.index = 0;
+  }
+
+  function changeSlide(step, modalIndex) {
+    const modals = document.querySelectorAll('.modal');
+    const modal = modals[modalIndex];
+    const container = modal.querySelector('.slides-container');
+    const slides = container.querySelectorAll('.slide');
+
+    let currentIndex = parseInt(container.dataset.index);
+    slides[currentIndex].classList.remove('active');
+
+    currentIndex += step;
+    if (currentIndex < 0) currentIndex = slides.length - 1;
+    if (currentIndex >= slides.length) currentIndex = 0;
+
+    slides[currentIndex].classList.add('active');
+    container.dataset.index = currentIndex;
+  }
+
+  // 더보기 버튼 기능 유지
+  let itemsToShow = 3;
+  let currentIndex = 0;
+
+  function loadMore() {
+    const items = document.querySelectorAll('.gallery-item');
+    for (let i = currentIndex; i < currentIndex + itemsToShow && i < items.length; i++) {
+      items[i].style.display = 'block';
+    }
+    currentIndex += itemsToShow;
+
+    if (currentIndex >= items.length) {
+      document.querySelector('.view-all-btn').style.display = 'none';
+    }
+  }
+
+  window.onload = function () {
+    loadMore();
+  };
 </script>
 
+
+  
 
 </body>
 </html>
