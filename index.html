@@ -68,35 +68,23 @@
         <img src="img/소수의방_교재.jpg" alt="소수의방" />
         <div class="overlay">브랜딩 키트</div>
       </div>
-      <div class="gallery-item" onclick="openModal('modal4')">
+      <div class="gallery-item" onclick="openModal('modal5')">
         <img src="img/소수의방_교재.jpg" alt="소수의방" />
         <div class="overlay">브랜딩 키트</div>
       </div>
-      <div class="gallery-item" onclick="openModal('modal4')">
+      <div class="gallery-item" onclick="openModal('modal6')">
         <img src="img/소수의방_교재.jpg" alt="소수의방" />
         <div class="overlay">브랜딩 키트</div>
       </div>
-      <div class="gallery-item" onclick="openModal('modal4')">
+      <div class="gallery-item" onclick="openModal('modal7')">
         <img src="img/소수의방_교재.jpg" alt="소수의방" />
         <div class="overlay">브랜딩 키트</div>
       </div>
-      <div class="gallery-item" onclick="openModal('modal4')">
+      <div class="gallery-item" onclick="openModal('modal8')">
         <img src="img/소수의방_교재.jpg" alt="소수의방" />
         <div class="overlay">브랜딩 키트</div>
       </div>
-      <div class="gallery-item" onclick="openModal('modal4')">
-        <img src="img/소수의방_교재.jpg" alt="소수의방" />
-        <div class="overlay">브랜딩 키트</div>
-      </div>
-      <div class="gallery-item" onclick="openModal('modal4')">
-        <img src="img/소수의방_교재.jpg" alt="소수의방" />
-        <div class="overlay">브랜딩 키트</div>
-      </div>
-      <div class="gallery-item" onclick="openModal('modal4')">
-        <img src="img/소수의방_교재.jpg" alt="소수의방" />
-        <div class="overlay">브랜딩 키트</div>
-      </div>
-      <div class="gallery-item" onclick="openModal('modal4')">
+      <div class="gallery-item" onclick="openModal('modal9')">
         <img src="img/소수의방_교재.jpg" alt="소수의방" />
         <div class="overlay">브랜딩 키트</div>
       </div>
@@ -113,29 +101,167 @@
   
 
   <!-- 모달들 -->
-  <div id="modal1" class="modal" onclick="closeModal(this)">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal(this)">&times;</span>
-      <img src="project1-detail.jpg" alt="상세 이미지" />
-      <p class="caption">패키지 디자인 상세 설명입니다.</p>
-    </div>
-  </div>
+ <div id="modal1" class="modal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closeModal(event)">&times;</span>
 
-  <div id="modal2" class="modal" onclick="closeModal(this)">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal(this)">&times;</span>
-      <img src="project2-detail.jpg" alt="상세 이미지" />
-      <p class="caption">로고 리디자인 상세 설명입니다.</p>
+    <div class="slider">
+      <button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>
+      <div class="slides-container" data-index="0">
+        <img src="project1-detail1.jpg" class="slide active" />
+        <img src="project1-detail2.jpg" class="slide" />
+        <img src="project1-detail3.jpg" class="slide" />
+      </div>
+      <button class="next" onclick="changeSlide(1, 0)">&#10095;</button>
     </div>
-  </div>
 
-  <div id="modal3" class="modal" onclick="closeModal(this)">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal(this)">&times;</span>
-      <img src="project3-detail.jpg" alt="상세 이미지" />
-      <p class="caption">브랜딩 키트 상세 설명입니다.</p>
-    </div>
+    <p class="caption">패키지 디자인 상세 설명입니다.</p>
   </div>
+</div>
+
+  <div id="modal2" class="modal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+
+    <div class="slider">
+      <button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>
+      <div class="slides-container" data-index="0">
+        <img src="project1-detail1.jpg" class="slide active" />
+        <img src="project1-detail2.jpg" class="slide" />
+        <img src="project1-detail3.jpg" class="slide" />
+      </div>
+      <button class="next" onclick="changeSlide(1, 0)">&#10095;</button>
+    </div>
+
+    <p class="caption">패키지 디자인 상세 설명입니다.</p>
+  </div>
+</div>
+
+  <div id="modal3" class="modal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+
+    <div class="slider">
+      <button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>
+      <div class="slides-container" data-index="0">
+        <img src="project1-detail1.jpg" class="slide active" />
+        <img src="project1-detail2.jpg" class="slide" />
+        <img src="project1-detail3.jpg" class="slide" />
+      </div>
+      <button class="next" onclick="changeSlide(1, 0)">&#10095;</button>
+    </div>
+
+    <p class="caption">패키지 디자인 상세 설명입니다.</p>
+  </div>
+</div>
+
+  <div id="modal4" class="modal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+
+    <div class="slider">
+      <button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>
+      <div class="slides-container" data-index="0">
+        <img src="project1-detail1.jpg" class="slide active" />
+        <img src="project1-detail2.jpg" class="slide" />
+        <img src="project1-detail3.jpg" class="slide" />
+      </div>
+      <button class="next" onclick="changeSlide(1, 0)">&#10095;</button>
+    </div>
+
+    <p class="caption">패키지 디자인 상세 설명입니다.</p>
+  </div>
+</div>
+
+  <div id="modal5" class="modal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+
+    <div class="slider">
+      <button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>
+      <div class="slides-container" data-index="0">
+        <img src="project1-detail1.jpg" class="slide active" />
+        <img src="project1-detail2.jpg" class="slide" />
+        <img src="project1-detail3.jpg" class="slide" />
+      </div>
+      <button class="next" onclick="changeSlide(1, 0)">&#10095;</button>
+    </div>
+
+    <p class="caption">패키지 디자인 상세 설명입니다.</p>
+  </div>
+</div>
+
+  <div id="modal6" class="modal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+
+    <div class="slider">
+      <button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>
+      <div class="slides-container" data-index="0">
+        <img src="project1-detail1.jpg" class="slide active" />
+        <img src="project1-detail2.jpg" class="slide" />
+        <img src="project1-detail3.jpg" class="slide" />
+      </div>
+      <button class="next" onclick="changeSlide(1, 0)">&#10095;</button>
+    </div>
+
+    <p class="caption">패키지 디자인 상세 설명입니다.</p>
+  </div>
+</div>
+
+  <div id="modal7" class="modal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+
+    <div class="slider">
+      <button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>
+      <div class="slides-container" data-index="0">
+        <img src="project1-detail1.jpg" class="slide active" />
+        <img src="project1-detail2.jpg" class="slide" />
+        <img src="project1-detail3.jpg" class="slide" />
+      </div>
+      <button class="next" onclick="changeSlide(1, 0)">&#10095;</button>
+    </div>
+
+    <p class="caption">패키지 디자인 상세 설명입니다.</p>
+  </div>
+</div>
+
+  <div id="modal8" class="modal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+
+    <div class="slider">
+      <button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>
+      <div class="slides-container" data-index="0">
+        <img src="project1-detail1.jpg" class="slide active" />
+        <img src="project1-detail2.jpg" class="slide" />
+        <img src="project1-detail3.jpg" class="slide" />
+      </div>
+      <button class="next" onclick="changeSlide(1, 0)">&#10095;</button>
+    </div>
+
+    <p class="caption">패키지 디자인 상세 설명입니다.</p>
+  </div>
+</div>
+
+  <div id="modal9" class="modal" onclick="closeModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+
+    <div class="slider">
+      <button class="prev" onclick="changeSlide(-1, 0)">&#10094;</button>
+      <div class="slides-container" data-index="0">
+        <img src="project1-detail1.jpg" class="slide active" />
+        <img src="project1-detail2.jpg" class="slide" />
+        <img src="project1-detail3.jpg" class="slide" />
+      </div>
+      <button class="next" onclick="changeSlide(1, 0)">&#10095;</button>
+    </div>
+
+    <p class="caption">패키지 디자인 상세 설명입니다.</p>
+  </div>
+</div>
 </section>
   
 <section class="plan-section">
