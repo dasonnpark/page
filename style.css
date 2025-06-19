@@ -71,12 +71,6 @@ header.navbar.dark-mode .nav-links a {
   font-size: 1.1rem; /* 또는 px 단위로 17px 정도 */
 }
 
-@media (max-width: 768px) {
-  .nav-links li a {
-    font-size: 1rem; /* 모바일에선 너무 크지 않게 */
-  }
-}
-
 .section {
   font-size: 1.2rem;
   padding: 80px 0 40px;
@@ -267,22 +261,6 @@ footer {
   color: #999;
 }
 
-/* 모바일 반응형 */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 10px;
-  }
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-}
-
 .slider {
   position: relative;
   display: flex;
@@ -337,7 +315,6 @@ footer {
   padding: 40px 0;
   justify-items: center;
 }
-
 
 .plan-section {
   padding: 80px 40px;
@@ -441,38 +418,6 @@ footer {
   font-size: 0.8rem;
   color: #666;
   margin-top: 16px;
-}
-
-@media (max-width: 768px) {
-  .gallery {
-    justify-content: center;
-  }
-
-  .gallery-item {
-    width: 100%;
-    max-width: 480px;
-  }
-}
-
-@media (max-width: 768px) {
-  .plan-container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 1024px) {
-  .plan-card {
-    flex: 1 1 48%;
-    max-width: 48%;
-  }
-}
-
-@media (max-width: 600px) {
-  .plan-card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
 }
 
 .contact-section {
@@ -607,17 +552,6 @@ footer {
   background-color: #444;
 }
 
-/* 반응형 */
-@media (max-width: 768px) {
-  .contact-wrapper {
-    flex-direction: column;
-  }
-
-  .contact-form {
-    min-width: 100%;
-  }
-}
-
  .scroll-indicator {
   position: absolute;
   bottom: 40px;
@@ -644,5 +578,89 @@ footer {
   }
   50% {
     transform: translateX(-50%) translateY(8px);
+  }
+}
+
+/* ----------------------------------
+   모바일 반응형 (화면 폭 ≤ 768px)
+------------------------------------ */
+@media (max-width: 768px) {
+  /* ─── 헤더 & 내비게이션 ─── */
+  header.navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+  .logo {
+    margin-bottom: 10px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  /* ─── Hero 섹션 ─── */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* ─── Portfolio ─── */
+  .gallery {
+    gap: 12px;
+    padding: 20px 0;
+  }
+  .gallery-item {
+    width: calc(50% - 6px);   /* 한 줄에 2개 */
+    padding-bottom: calc((50% - 6px) * 4 / 3); /* 3:4 비율 */
+  }
+  .view-all-btn {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 0;
+  }
+
+  /* ─── Service Plan ─── */
+  .plan-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .plan-card {
+    max-width: 100%;
+    flex: none;
+    padding: 24px 16px;
+  }
+
+  /* ─── Contact ─── */
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    min-width: auto;
+  }
+
+  /* ─── 폰트 크기 전반 ─── */
+  h2, .plan-card h3 {
+    font-size: 1.4rem;
+  }
+  .section p, .contact-info p {
+    font-size: 0.9rem;
+  }
+  .form-group label {
+    font-size: 0.85rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
   }
 }
