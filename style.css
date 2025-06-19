@@ -218,16 +218,6 @@ header.navbar {
   font-size: 1.2rem;
 }
 
-.close {
-  position: absolute;
-  top: 30px;
-  right: 50px;
-  color: white;
-  font-size: 32px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 .overlay {
   position: absolute;
   bottom: 0;
