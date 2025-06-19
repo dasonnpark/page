@@ -207,7 +207,7 @@ header.navbar {
   max-width: 80%;
   max-height: 80%;
   background: transparent;  /* 배경을 투명으로 바꿔줍니다 */
-  padding: 40px 20px 20px; 
+  padding: 15px 100px 20px; 
   box-shadow: none;         /* 그림자가 있으면 없앱니다 */
 }
 
