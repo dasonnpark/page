@@ -76,7 +76,7 @@ header.navbar {
   font-size: 2rem;  /* 기존보다 크게 */
   color: #444;
   text-align: left; /* 왼쪽 정렬 */
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .hero {
