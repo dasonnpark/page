@@ -662,3 +662,26 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+  /* ─── 모달창 최적화 ─── */
+  .modal-content {
+    width: 90% !important;
+    max-width: 400px !important;
+    padding: 16px !important;
+  }
+  .slides-container {
+    max-width: 100% !important;
+  }
+  .prev, .next {
+    font-size: 1.5rem !important;
+    padding: 6px !important;
+  }
+
+  /* ─── Plan 섹션 세부 조정 ─── */
+  .section-block {
+    min-height: auto !important;
+    margin-bottom: 16px !important;
+  }
+  .tip {
+    margin-top: 12px !important;
+  }
