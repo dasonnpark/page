@@ -166,7 +166,7 @@ header.navbar {
   opacity: 0;
   transition: opacity 0.3s ease;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .gallery-item:hover .overlay {
