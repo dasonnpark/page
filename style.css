@@ -38,7 +38,7 @@ header.navbar {
 
 /* 어두운 배경(=Hero 섹션) 위에 있을 때 적용 */
 header.navbar.dark-mode {
-  background-color: rgba(0,0,0,0.4); */
+  background-color: rgba(0,0,0,0.0); */
 }
 
 header.navbar.dark-mode .logo-green,
