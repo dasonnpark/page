@@ -36,6 +36,17 @@ header.navbar {
   z-index: 1000;
 }
 
+/* 어두운 배경(=Hero 섹션) 위에 있을 때 적용 */
+header.navbar.dark-mode {
+  background-color: rgba(0,0,0,0.4); */
+}
+
+header.navbar.dark-mode .logo-green,
+header.navbar.dark-mode .logo-black,
+header.navbar.dark-mode .nav-links a {
+  color: #fff !important;
+}
+
 .navbar .logo {
   font-weight: bold;
   font-size: 1.3rem;
