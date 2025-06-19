@@ -148,9 +148,13 @@ header.navbar.dark-mode .nav-links a {
 
 .gallery-item {
   width: calc((100% - 40px) / 3);
+  height: 0;                        /* 높이를 0으로 놓고 */
+  padding-bottom: 133.333%;         /* 세로 = 가로 × (4/3) */
   position: relative;
-  padding-bottom: 133.333%; /* (4 ÷ 3)×100% */
   overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
 }
 
 .gallery-item img {
