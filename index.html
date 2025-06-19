@@ -376,24 +376,26 @@
 </script>
 
 <script>
-  const header = document.querySelector('header.navbar');
-  const hero = document.querySelector('.hero');
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header.navbar');
+    const hero   = document.querySelector('.hero');
 
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Hero가 보일 때 → 어두운 배경 영역
-        header.classList.add('dark-mode');
-      } else {
-        // Hero를 벗어날 때 → 밝은 배경
-        header.classList.remove('dark-mode');
-      }
+    if (!header || !hero) return;
+
+    // Intersection Observer 로 hero 섹션 진입/이탈 감지
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          header.classList.add('dark-mode');    // 어두운 Hero 위
+        } else {
+          header.classList.remove('dark-mode'); // 밝은 그 외 영역
+        }
+      });
+    }, {
+      threshold: 0.1
     });
-  }, {
-    threshold: 0.1
+    io.observe(hero);
   });
-
-  io.observe(hero);
 </script>
 
   
