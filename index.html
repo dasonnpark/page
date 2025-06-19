@@ -375,7 +375,26 @@
   };
 </script>
 
+<script>
+  const header = document.querySelector('header.navbar');
+  const hero = document.querySelector('.hero');
 
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Hero가 보일 때 → 어두운 배경 영역
+        header.classList.add('dark-mode');
+      } else {
+        // Hero를 벗어날 때 → 밝은 배경
+        header.classList.remove('dark-mode');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  io.observe(hero);
+</script>
 
   
 
