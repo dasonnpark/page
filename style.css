@@ -367,7 +367,7 @@ footer {
 
 /* 카드 안 각 섹션 묶음을 정렬하기 위한 블록 */
 .section-block {
-  min-height: 140px; /* 포함 항목 */
+  min-height: 156px; /* 포함 항목 */
   margin-bottom: 20px;
 }
 
