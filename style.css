@@ -19,6 +19,7 @@ body {
   background-color: #fff;
   color: #222;
   line-height: 1.6;
+  padding-top: 80px;
 }
 
 a {
@@ -26,19 +27,16 @@ a {
   text-decoration: none;
 }
 header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: transparent;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
   z-index: 1000;
-}
-
-/* 어두운 배경(=Hero 섹션) 위에 있을 때 적용 */
-header.navbar.dark-mode {
-  background-color: rgba(0,0,0,0.0); */
 }
 
 header.navbar.dark-mode .logo-green,
