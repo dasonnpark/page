@@ -19,6 +19,13 @@ body {
   background-color: #fff;
   color: #222;
   line-height: 1.6;
+  padding-top: 0; /* 헤더가 히어로 위로 뜨도록 */
+}
+
+/* 히어로 다음부터는 헤더 높이만큼 여백을 주기 */
+#about,
+#portfolio,
+#contact {
   padding-top: 80px;
 }
 
