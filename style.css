@@ -700,4 +700,10 @@ footer {
   .tip {
     margin-top: 12px !important;
   }
+/* ─── 여백 재조정 ─── */
+  #about,
+  #portfolio,
+  #contact {
+    padding-top: 80px;
+  }
 }
