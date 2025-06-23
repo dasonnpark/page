@@ -23,7 +23,6 @@ body {
 }
 
 /* 히어로 다음부터는 헤더 높이만큼 여백을 주기 */
-#about,
 #portfolio,
 #contact {
   padding-top: 80px;
