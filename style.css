@@ -507,11 +507,10 @@ footer {
 
 .consent-container {
   display: flex;
-  align-items: flex-start;     /* ✅ 핵심! 가운데 정렬 → 왼쪽 정렬 */
+  align-items: flex-start;
   justify-content: flex-start;
-  gap: 8px;
   width: 100%;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .consent-container input[type="checkbox"] {
@@ -519,10 +518,11 @@ footer {
   appearance: checkbox;
 }
 
-
-.consent-container label {
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
-  line-height: 1.4;
   color: #222;
 }
 
