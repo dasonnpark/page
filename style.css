@@ -313,10 +313,9 @@ footer {
 }
 
 .plan-section {
-  padding: 80px 40px;
+  padding: 80px 5vw; /* 양옆 여백만 vw로 */
   background: #f9f9fb;
   text-align: center;
-  display: block;
 }
 
 .plan-section h2 {
@@ -326,14 +325,14 @@ footer {
 
 .plan-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;          /* ✅ 한 줄로 강제 정렬 */
   justify-content: space-between;
   gap: 24px;
 }
 
 .plan-card {
-  flex: 1 1 calc(33.333% - 16px); /* 각 카드가 3등분되도록 하고 gap 감안 */
-  max-width: calc(33.333% - 16px);
+  flex: 1 1 0;                 /* ✅ 모든 카드 동일한 너비 */
+  min-width: 0;               /* ✅ 넘침 방지 */
   background: #fff;
   border-radius: 16px;
   padding: 32px 24px;
