@@ -625,6 +625,16 @@ footer {
     line-height: 1.4 !important;
   }
 
+  #about p {
+    font-size: 1.1rem !important;  /* ✅ 모바일에서만 크기 축소 */
+    line-height: 1.6;
+  }
+
+  #about h2 {
+    font-size: 1.6rem !important;  /* (선택) 제목도 줄이고 싶다면 */
+  }
+}
+  
   /* ─── Portfolio ─── */
   .gallery {
     gap: 12px !important;
