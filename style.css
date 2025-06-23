@@ -645,16 +645,36 @@ footer {
     padding: 24px 16px !important;
   }
 
-  /* ─── Contact ─── */
-  .contact-wrapper {
-    flex-direction: column !important;
-    gap: 30px !important;
-  }
-  .contact-info,
-  .contact-form {
-    width: 100% !important;
-  }
+/* ─── Contact (수정 사항) ─── */
+.contact-form {
+  width: 100% !important;
+  min-width: 0 !important;       /* ✅ 문제 해결 핵심: min-width 제거 */
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
 
+.form-group {
+  width: 100% !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100% !important;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* 개인정보 체크박스 정렬도 함께 수정 */
+.consent-container {
+  flex-direction: row !important;
+  align-items: center !important;
+  margin-left: 0 !important;
+}
+
+.consent-container input[type="checkbox"] {
+  margin: 0 8px 0 0 !important;
+}
+  
   /* ─── 모달창 최적화 ─── */
   .modal-content {
     width: 90% !important;
