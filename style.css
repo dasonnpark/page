@@ -514,7 +514,7 @@ footer {
 }
 
 .consent-container input[type="checkbox"] {
-  margin: 0px -250px 1px -250px /* 텍스트와 간격 */
+  margin: 0 8px 0 0; /* 텍스트와 간격 */
 }
 
 .consent-container label {
