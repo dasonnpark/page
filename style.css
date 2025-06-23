@@ -128,14 +128,6 @@ header.navbar.dark-mode .nav-links a {
   color: #fff;
 }
 
-
-.portfolio-img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;  /* 이미지 비율 유지하면서 잘라줌 */
-  border-radius: 8px;  /* 둥근 모서리 효과 */
-}
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -612,15 +604,6 @@ footer {
     font-size: 1rem !important;
     line-height: 1.4 !important;
   }
-
-  #about p {
-    font-size: 1.1rem !important;  /* ✅ 모바일에서만 크기 축소 */
-    line-height: 1.6;
-  }
-
-  #about h2 {
-    font-size: 1.6rem !important;  /* (선택) 제목도 줄이고 싶다면 */
-  }
 }
   
   /* ─── Portfolio ─── */
@@ -672,16 +655,6 @@ footer {
     box-sizing: border-box;
   }
 
-  .consent-container {
-    flex-direction: row !important;
-    align-items: center !important;
-    margin-left: 0 !important;
-  }
-
-  .consent-container input[type="checkbox"] {
-    margin: 0 8px 0 0 !important;
-  }
-
   .contact-buttons {
     margin-bottom: 8px !important;      /* ✅ 이 줄 추가 */
   }
@@ -708,19 +681,8 @@ footer {
   }
 
   /* ─── 헤더 아래 여백 ─── */
-  #about,
   #portfolio,
   #contact {
     padding-top: 120px !important;
-  }
-}
-
-@media (min-width: 769px) {
-  .plan-section {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    padding-left: 40px;
-    padding-right: 40px;
-    box-sizing: border-box;
   }
 }
