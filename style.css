@@ -655,9 +655,12 @@ footer {
     gap: 20px !important;
   }
   .plan-card {
-    max-width: 100% !important;
-    padding: 24px 16px !important;
-  }
+  max-width: 100% !important;
+  flex: 1 1 100% !important;
+  padding: 24px 20px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box;
+}
 
 /* ─── Contact (수정 사항) ─── */
 .contact-form {
