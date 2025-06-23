@@ -714,3 +714,13 @@ footer {
     padding-top: 120px !important;
   }
 }
+
+@media (min-width: 769px) {
+  .plan-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+}
