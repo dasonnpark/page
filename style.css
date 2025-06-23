@@ -505,25 +505,13 @@ footer {
   min-height: 120px;
 }
 
-.consent-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  margin-top: 12px;
-}
-
-.consent-container input[type="checkbox"] {
-  margin-top: 4px;             /* ✅ baseline 보정: 텍스트 첫 줄과 맞추기 */
-  appearance: checkbox;
-}
-
-.checkbox-label {
+.consent-checkbox {
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 14px;
   color: #222;
+  margin-top: 12px;
 }
 
 .submit-btn {
