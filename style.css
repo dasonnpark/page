@@ -512,6 +512,7 @@ footer {
   font-size: 14px;
   color: #222;
   margin-top: 12px;
+  white-space: nowrap;
 }
 
 .submit-btn {
