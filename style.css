@@ -507,7 +507,7 @@ footer {
 
 .consent-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;     /* ✅ 핵심! 가운데 정렬 → 왼쪽 정렬 */
   justify-content: flex-start;
   gap: 8px;
   width: 100%;
@@ -515,7 +515,7 @@ footer {
 }
 
 .consent-container input[type="checkbox"] {
-  margin: 0;
+  margin-top: 4px;             /* ✅ 텍스트 baseline보다 약간 올리기 */
 }
 
 .consent-container label {
