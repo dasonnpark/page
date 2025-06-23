@@ -509,18 +509,19 @@ footer {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 8px; /* 체크박스와 텍스트 사이 간격 */
+  gap: 8px;
   width: 100%;
   margin-top: 8px;
 }
 
 .consent-container input[type="checkbox"] {
-  margin: 0; /* 기본 마진 제거 */
+  margin: 0;
 }
 
 .consent-container label {
   font-size: 14px;
   line-height: 1.4;
+  color: #222;
 }
 
 .submit-btn {
