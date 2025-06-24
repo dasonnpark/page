@@ -598,13 +598,6 @@ footer {
     line-height: 1.4 !important;
   }
 
-  .hero,
-  .section,
-  #portfolio,
-  #contact {
-    padding-top: 140px !important; /* ✅ 섹션이 네비게이션과 겹치지 않도록 */
-  }
-
   .hero-content {
     padding-top: 20px; /* 텍스트 너무 붙지 않도록 */
   }
@@ -682,10 +675,11 @@ footer {
   }
 }
 
-/* 최종 적용할 추천 코드 */
+/* 공통: 헤더 높이만큼 여백 주기 */
 .hero,
 .section,
 #portfolio,
 #contact {
-  padding-top: 100px;
+  padding-top: 140px; /* 헤더 + 로고 높이 만큼 줘야함 (고정값) */
+  box-sizing: border-box;
 }
