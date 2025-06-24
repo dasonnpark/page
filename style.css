@@ -603,8 +603,18 @@ footer {
     font-size: 1rem !important;
     line-height: 1.4 !important;
   }
-}
-  
+
+  .hero,
+  .section,
+  #portfolio,
+  #contact {
+    padding-top: 140px !important; /* ✅ 섹션이 네비게이션과 겹치지 않도록 */
+  }
+
+  .hero-content {
+    padding-top: 20px; /* 텍스트 너무 붙지 않도록 */
+  }
+
   /* ─── Portfolio ─── */
   .gallery {
     gap: 12px !important;
@@ -625,22 +635,20 @@ footer {
     gap: 20px !important;
   }
   .plan-card {
-  max-width: 100% !important;
-  flex: 1 1 100% !important;
-  padding: 24px 20px !important;
-  margin: 0 auto !important;
-  box-sizing: border-box;
-}
-}
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+    padding: 24px 20px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box;
+  }
 
-
-/* ─── Contact (수정 사항) ─── */
-.contact-form {
+  /* ─── Contact (수정 사항) ─── */
+  .contact-form {
     width: 100% !important;
     min-width: 0 !important;
     padding: 0 !important;
     box-sizing: border-box !important;
-    margin-top: 0 !important;           /* ✅ 여기 추가 */
+    margin-top: 0 !important;
   }
 
   .form-group {
@@ -655,10 +663,9 @@ footer {
   }
 
   .contact-buttons {
-    margin-bottom: 8px !important;      /* ✅ 이 줄 추가 */
+    margin-bottom: 8px !important;
   }
-}
-  
+
   /* ─── 모달창 최적화 ─── */
   .modal-content {
     width: 90% !important;
@@ -675,13 +682,8 @@ footer {
     min-height: auto !important;
     margin-bottom: 16px !important;
   }
+
   .tip {
     margin-top: 12px !important;
-  }
-
-  /* ─── 헤더 아래 여백 ─── */
-  #portfolio,
-  #contact {
-    padding-top: 120px !important;
   }
 }
