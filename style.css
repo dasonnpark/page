@@ -22,12 +22,6 @@ body {
   padding-top: 0; /* 헤더가 히어로 위로 뜨도록 */
 }
 
-/* 히어로 다음부터는 헤더 높이만큼 여백을 주기 */
-#portfolio,
-#contact {
-  padding-top: 80px;
-}
-
 a {
   color: #00766f;
   text-decoration: none;
@@ -686,4 +680,12 @@ footer {
   .tip {
     margin-top: 12px !important;
   }
+}
+
+/* 최종 적용할 추천 코드 */
+.hero,
+.section,
+#portfolio,
+#contact {
+  padding-top: 100px;
 }
