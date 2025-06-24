@@ -683,3 +683,10 @@ footer {
   padding-top: 140px; /* 헤더 + 로고 높이 만큼 줘야함 (고정값) */
   box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    margin: 0px; /* 또는 margin: 0; 또는 원하는 값 */
+  }
+}
+
