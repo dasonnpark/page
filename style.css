@@ -31,7 +31,7 @@ header.navbar {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: transparent !important;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -575,6 +575,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 12px 20px;
+    position: absolute;
   }
   .logo {
     margin-bottom: 10px;
