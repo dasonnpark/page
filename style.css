@@ -675,13 +675,14 @@ footer {
   }
 }
 
-/* 공통: 헤더 높이만큼 여백 주기 */
-.hero,
-.section,
-#portfolio,
-#contact {
-  padding-top: 140px; /* 헤더 + 로고 높이 만큼 줘야함 (고정값) */
-  box-sizing: border-box;
+@media (max-width: 768px) {
+  .hero,
+  .section,
+  #portfolio,
+  #contact,
+  .plan-section {
+    padding-top: 140px !important;
+  }
 }
 
 @media (max-width: 768px) {
