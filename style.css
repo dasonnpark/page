@@ -571,22 +571,31 @@ footer {
 ------------------------------------ */
 @media (max-width: 768px) {
   /* ─── 헤더 & 내비게이션 ─── */
-  header.navbar {
-    flex-direction: column;
+ header.navbar {
+    display: flex;
+    flex-direction: row !important; /* 가로 정렬 */
     align-items: center;
+    justify-content: space-between;
     padding: 12px 20px;
-    position: absolute;
+    position: relative; /* absolute → relative 또는 제거 */
+    width: 100%;
+    box-sizing: border-box;
   }
   .logo {
-    margin-bottom: 10px;
+    margin-bottom: 0 !important; /* 세로 정렬일 때만 쓰던 여백 제거 */
+    flex-shrink: 0;
   }
-  .nav-links {
+.nav-links {
     display: flex !important;
-    gap: 24px !important;
     flex-direction: row !important;
-    justify-content: space-around !important;
-    width: 100%;
+    justify-content: flex-end !important;
+    gap: 24px !important;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-grow: 1;
   }
+
   .nav-links li a {
     font-size: 1rem !important;
   }
