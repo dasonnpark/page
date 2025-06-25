@@ -582,6 +582,7 @@ footer {
   }
   .nav-links {
     display: flex !important;
+    gap: 24px !important;
     flex-direction: row !important;
     justify-content: space-around !important;
     width: 100%;
