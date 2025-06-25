@@ -595,7 +595,11 @@ footer {
     list-style: none;
     flex-grow: 1;
   }
-
+  
+.nav-links a {
+    color: #242321 !important;
+  }
+  
   .nav-links li a {
     font-size: 1rem !important;
   }
