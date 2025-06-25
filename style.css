@@ -741,3 +741,26 @@ footer {
     color: #242321 !important;
   }
 }
+
+@media (max-width: 768px) {
+  .go-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #00766f;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  .go-top-btn:hover {
+    background-color: #005f5a;
+  }
+}
+
