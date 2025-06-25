@@ -107,6 +107,7 @@ header.navbar.dark-mode .nav-links a {
 .hero-content {
   color: white;
   z-index: 1;
+  padding-top: 100px;
   text-align: left; /* ✅ 추가 */
 }
 
