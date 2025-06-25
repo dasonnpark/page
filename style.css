@@ -727,3 +727,17 @@ footer {
     display: inline !important;
   }
 }
+
+@media (max-width: 768px) {
+  header.navbar.dark-mode .logo-green {
+    color: #00766f !important;
+  }
+
+  header.navbar.dark-mode .logo-black {
+    color: #242321 !important;
+  }
+
+  header.navbar.dark-mode .nav-links a {
+    color: #242321 !important;
+  }
+}
