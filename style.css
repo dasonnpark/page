@@ -774,3 +774,13 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .prev {
+    left: 10px !important;   /* 화면 안쪽으로 들여옴 */
+  }
+
+  .next {
+    right: 10px !important;  /* 화면 안쪽으로 들여옴 */
+  }
+}
+
