@@ -134,7 +134,7 @@ header.navbar.dark-mode .nav-links a {
 .gallery-item {
   width: calc((100% - 40px) / 3);
   height: 0;
-  padding-bottom: 75%;  /* 3:4 = 0.75 */
+  padding-bottom: 43%;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
