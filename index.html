@@ -294,7 +294,7 @@
     document.getElementById("contact-form").addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const check = document.getElementById("privacy-check");
+      const check = document.getElementById("consent");
       if (!check.checked) {
         alert("개인정보 제공에 동의해주셔야 문의를 보낼 수 있어요.");
         return;
