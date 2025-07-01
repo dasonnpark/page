@@ -291,11 +291,11 @@ footer {
 }
 
 .prev {
-  left: 5px;
+  left: -70px;
 }
 
 .next {
-  right: 5px;
+  right: -70px;
 }
 
 .grid-layout {
